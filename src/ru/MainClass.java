@@ -21,7 +21,7 @@ public class MainClass{
 					new CresNolGame().gameMenu();
 					break;
 				case "2":
-					//new SudokuGame().gameMenu();
+					new SudokuGame().gameMenu();
 					break;
 				case "3":
 					//new SaperGame().gameMenu();

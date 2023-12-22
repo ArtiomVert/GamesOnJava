@@ -31,4 +31,16 @@ public class View{
 		println("-+-+-");
 		println(ch(desk[2][0]) + "|" + ch(desk[2][1]) + "|" + ch(desk[2][2]));
 	}
+	public void printField(int[][] field){
+		for (int i = 0; i < 9; i++){
+        	for (int j = 0; j < 9; j++){
+        		print(field[i][j]==0?" ":field[i][j]);
+        		print((j == 2 || j == 5)?"|":" ");
+        	}
+        	println("");
+        	if (i == 2 || i == 5){
+        		println("-----+-----+-----");
+        	}
+        }
+	}
 }
