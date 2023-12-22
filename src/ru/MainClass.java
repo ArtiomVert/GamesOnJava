@@ -27,7 +27,7 @@ public class MainClass{
 					new SaperGame().gameMenu();
 					break;
 				case "4":
-					//new BatleField().gameMenu();
+					new BatleField().gameMenu();
 					break;
 				case "5":
 					//new NumsGame().gameMenu();
