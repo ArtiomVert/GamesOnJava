@@ -24,7 +24,7 @@ public class MainClass{
 					new SudokuGame().gameMenu();
 					break;
 				case "3":
-					//new SaperGame().gameMenu();
+					new SaperGame().gameMenu();
 					break;
 				case "4":
 					//new BatleField().gameMenu();
