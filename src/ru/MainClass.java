@@ -1,4 +1,5 @@
 package ru;
+import ru.games.*;
 import java.util.Scanner;
 public class MainClass{
 	public static void main(String[] args) {
@@ -17,7 +18,7 @@ public class MainClass{
 			String comand = inp.nextLine();
 			switch(comand){
 				case "1":
-					//new CresNolGame().gameMenu();
+					new CresNolGame().gameMenu();
 					break;
 				case "2":
 					//new SudokuGame().gameMenu();
