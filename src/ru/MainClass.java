@@ -30,7 +30,7 @@ public class MainClass{
 					new BatleField().gameMenu();
 					break;
 				case "5":
-					//new NumsGame().gameMenu();
+					new NumsGame().gameMenu();
 					break;
 				case "6":
 					f = false;
