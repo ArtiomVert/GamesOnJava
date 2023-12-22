@@ -1,7 +1,7 @@
 package ru.fields;
 import java.util.Random;
 public class SudokuField{
-	int[][] field = new int[9][9];
+	public int[][] field = new int[9][9];
 	public SudokuField(int[][] field1){
 		for (int i = 0; i < 9; i ++){
 			for (int j = 0; j < 9; j ++){
