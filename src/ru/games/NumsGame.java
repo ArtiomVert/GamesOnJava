@@ -51,15 +51,56 @@ public class NumsGame{
 		while(playf){
 			if (field.isFull()){
 				v.clean();
-				//TODO make v.field2048(field.field);
+				v.field2048(field.field);
 				v.println("Ходы невозможны. Игра закончилась.");
 				break;
 			}
-			//TODO make hod();
+			hod();
 			if (field.hasZero()){
 				field.fillField();
 			}
 		}
 		playf = true;
-	}	
+	}
+	private void hod(){
+		v.clean();
+		v.field2048(field.field);
+		v.println("Сделайте ход:");
+		v.println("w - вверх");
+		v.println("d - вправо");
+		v.println("a - влево");
+		v.println("s - вниз");
+		v.println("x - Выйти из игры");
+		Scanner inp = new Scanner(System.in);
+		boolean f = true;
+		while (f){
+			String comand = inp.nextLine();
+			switch(comand){
+				case "w":
+					field.hodw();
+					f=false;
+					break;
+				case "d":
+					field.hodd();
+					f=false;
+					break;
+				case "s":
+					field.hods();
+					f=false;
+					break;
+				case "a":
+					field.hoda();
+					f=false;
+					break;
+				case "x":
+					v.clean();
+					f = false;
+					playf = false;
+					break;
+				default:
+					v.println("Извините, команда не ясна, попробуйте скова :(");
+					break;
+			}
+		}
+	}
 }

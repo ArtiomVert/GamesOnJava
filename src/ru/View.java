@@ -155,4 +155,39 @@ public class View{
 			sleep(300);
 		}
 	}
+	private String q(String s, int n){
+		String sout = "";
+		for (int i = 0; i < n; i++){
+			sout += s;
+		}
+		return sout;
+	}
+	public void field2048(int[][] f){
+		int lenf = f.length;
+		int maxnum = 0;
+		for (int i = 0; i < lenf; i++){
+			for (int j = 0; j < lenf; j++){
+				if (maxnum < f[i][j]){
+					maxnum = f[i][j];
+				}
+			}
+		}
+		int maxlen = String.valueOf(maxnum).length();
+		for (int i = 0; i < lenf; i++){
+			for (int j = 0; j < lenf; j++){
+				print("|");
+				if (f[i][j]!=0){
+					int loclen = String.valueOf(f[i][j]).length();
+					print(q(" ", (maxlen - loclen+1)/2) + f[i][j] + q(" ", (maxlen - loclen)/2));
+				} else {
+					print(q(" ", maxlen));
+				}
+			}
+			println("");
+			for (int j = 0; j < lenf; j++){
+				print("+" + q("-", maxlen));
+			}
+			println("");
+		}
+	}
 }
