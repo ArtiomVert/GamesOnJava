@@ -2,9 +2,10 @@ package ru;
 public class View{
 	public void clean(){
 		try{
-			new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();
+			new ProcessBuilder("clear").inheritIO().start().waitFor();//Linux
+			//new ProcessBuilder("cmd", "/c", "cls").inheritIO().start().waitFor();//Windows
 		} catch(Exception e){
-			System.out.println("Извините, какие-то ошибки");
+			System.out.println(e.getMessage());
 		}
 	}
 	public void println(Object s){
